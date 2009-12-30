@@ -1,0 +1,35 @@
+<% title "Imovel Locacoes" %>
+
+<table>
+  <tr>
+    <th>Cliente</th>
+    <th>Endereco Imovel</th>
+    <th>Cidade Imovel</th>
+    <th>Bairro Imovel</th>
+    <th>Entre Ruas</th>
+    <th>Ponto Referencia</th>
+    <th>Valor Aluguel</th>
+    <th>Valor Condominio</th>
+    <th>Area Total</th>
+    <th>Descricao</th>
+  </tr>
+  <% for imovel_locacao in @imovel_locacoes %>
+    <tr>
+      <td><%=h imovel_locacao.cliente_id %></td>
+      <td><%=h imovel_locacao.endereco_imovel %></td>
+      <td><%=h imovel_locacao.cidade_imovel %></td>
+      <td><%=h imovel_locacao.bairro_imovel %></td>
+      <td><%=h imovel_locacao.entre_ruas %></td>
+      <td><%=h imovel_locacao.ponto_referencia %></td>
+      <td><%=h imovel_locacao.valor_aluguel %></td>
+      <td><%=h imovel_locacao.valor_condominio %></td>
+      <td><%=h imovel_locacao.area_total %></td>
+      <td><%=h imovel_locacao.descricao %></td>
+      <td><%= link_to "Show", imovel_locacao %></td>
+      <td><%= link_to "Edit", edit_imovel_locacao_path(imovel_locacao) %></td>
+      <td><%= link_to "Destroy", imovel_locacao, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Imovel Locacao", new_imovel_locacao_path %></p>

@@ -1,0 +1,24 @@
+<% form_for @restaurante do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :cliente_id %><br />
+    <%= f.text_field :cliente_id %>
+  </p>
+  <p>
+    <%= f.label :descricao %><br />
+    <%= f.text_area :descricao %>
+  </p>
+  <p>
+    <%= f.label :cardapio %><br />
+    <%= f.text_area :cardapio %>
+  </p>
+  <p>
+    <%= f.label :forma_pagamento %><br />
+    <%= f.text_area :forma_pagamento %>
+  </p>
+  <p>
+    <%= f.label :horario_atendimento %><br />
+    <%= f.text_area :horario_atendimento %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

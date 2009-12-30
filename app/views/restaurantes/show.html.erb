@@ -1,0 +1,28 @@
+<% title "Restaurante" %>
+
+<p>
+  <strong>Cliente:</strong>
+  <%=h @restaurante.cliente_id %>
+</p>
+<p>
+  <strong>Descricao:</strong>
+  <%=h @restaurante.descricao %>
+</p>
+<p>
+  <strong>Cardapio:</strong>
+  <%=h @restaurante.cardapio %>
+</p>
+<p>
+  <strong>Forma Pagamento:</strong>
+  <%=h @restaurante.forma_pagamento %>
+</p>
+<p>
+  <strong>Horario Atendimento:</strong>
+  <%=h @restaurante.horario_atendimento %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_restaurante_path(@restaurante) %> |
+  <%= link_to "Destroy", @restaurante, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", restaurantes_path %>
+</p>

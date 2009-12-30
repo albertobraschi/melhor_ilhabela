@@ -1,0 +1,2 @@
+module BarEBoatesHelper
+end

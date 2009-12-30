@@ -1,0 +1,33 @@
+<li class="foto">
+  <% fields_for "hoteis_pousada[foto_atributos][]", foto do |p| %>
+    <% unless foto.id.blank? %>
+        <div class="input-block-50 center">
+          <%= p.label :imagem,"Escolha a imagem" %><br />
+          <%= image_tag foto.imagem.url(:thumb) %>
+        </div>
+        <div class="input-block-25 center">
+          <%= p.label :imagem_legenda,"Legenda para imagem" %><br />
+          <strong><%= foto.imagem_legenda %></strong>
+        </div>
+        <div class="input-block-25 center">
+          <br />
+          <%= check_box_tag "foto_ids[]", foto.id %>
+        </div>
+    <% else %>
+        <%= p.hidden_field :estabelecimento_id, :value=>params[:estabelecimento_id] %>
+        <div class="input-block-50 center">
+          <%= p.label :imagem,"Escolha a imagem" %><br />
+          <%= p.file_field :imagem, :index => nil %>
+        </div>
+        <div class="input-block-25 center">
+          <%= p.label :imagem_legenda,"Legenda para imagem" %><br />
+          <%= p.text_field :imagem_legenda, :index => nil %>
+        </div>
+        <div class="input-block-25 center">
+          <br />
+          <%= link_to_function "<button>apagar campo</button>", "remove_field($(this), ('.foto'))" %>
+        </div>
+    <% end %>
+  <% end %>
+</li>
+

@@ -1,0 +1,29 @@
+<% title "Tarifarios" %>
+
+<table>
+  <tr>
+    <th>Acomodacao</th>
+    <th>Valor Balcao</th>
+    <th>Valor Internet</th>
+    <th>Periodo</th>
+    <th>Iniciar Em</th>
+    <th>Terminar Em</th>
+    <th>Estabelecimento</th>
+  </tr>
+  <% for tarifario in @tarifarios %>
+    <tr>
+      <td><%=h tarifario.acomodacao %></td>
+      <td><%=h tarifario.valor_balcao %></td>
+      <td><%=h tarifario.valor_internet %></td>
+      <td><%=h tarifario.periodo %></td>
+      <td><%=h tarifario.iniciar_em %></td>
+      <td><%=h tarifario.terminar_em %></td>
+      <td><%=h tarifario.estabelecimento_id %></td>
+      <td><%= link_to "Show", tarifario %></td>
+      <td><%= link_to "Edit", edit_tarifario_path(tarifario) %></td>
+      <td><%= link_to "Destroy", tarifario, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Tarifario", new_tarifario_path %></p>

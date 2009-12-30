@@ -1,10 +1,8 @@
-# Be sure to restart your server when you modify this file.
+ActiveSupport::Inflector.inflections do |inflect|
+  inflect.plural /ao$/i, 'oes'
+  inflect.singular /oes$/i, 'ao'
+  inflect.plural /l$/i, 'is'
+  inflect.singular /is$/i, 'l'
+  inflect.singular(/(r|z)es$/i, '\1')
+end
 
-# Add new inflection rules using the following format 
-# (all these examples are active by default):
-# ActiveSupport::Inflector.inflections do |inflect|
-#   inflect.plural /^(ox)$/i, '\1en'
-#   inflect.singular /^(ox)en/i, '\1'
-#   inflect.irregular 'person', 'people'
-#   inflect.uncountable %w( fish sheep )
-# end

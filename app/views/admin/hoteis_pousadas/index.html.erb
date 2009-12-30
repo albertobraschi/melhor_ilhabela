@@ -1,0 +1,23 @@
+<% title "Hoteis_pousadas" %>
+
+<table>
+  <tr>
+    <th>Estabelecimento</th>
+    <th>Apresentacao</th>
+    <th>Tipo Acomodacao</th>
+    <th>Caracteristica Acomodacao</th>
+  </tr>
+  <% for hoteis_pousada in @hoteis_pousadas %>
+    <tr>
+      <td><%=h hoteis_pousada.estabelecimento_id %></td>
+      <td><%=h hoteis_pousada.apresentacao %></td>
+      <td><%=h hoteis_pousada.tipo_acomodacao %></td>
+      <td><%=h hoteis_pousada.caracteristica_acomodacao %></td>
+      <td><%= link_to "Show", hoteis_pousada %></td>
+      <td><%= link_to "Edit", edit_hoteis_pousada_path(hoteis_pousada) %></td>
+      <td><%= link_to "Destroy", hoteis_pousada, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Hoteis_pousada", new_hoteis_pousada_path %></p>

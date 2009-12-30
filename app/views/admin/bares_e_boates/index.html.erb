@@ -1,0 +1,26 @@
+<% title "Bares E Boates" %>
+
+<table>
+  <tr>
+    <th>Cliente</th>
+    <th>Descricao</th>
+    <th>Publico Alvo</th>
+    <th>Forma Pagamento</th>
+    <th>Horario Atendimento</th>
+  </tr>
+  <% for bares_e_boate in @bares_e_boates %>
+    <tr>
+      <td><%=h bares_e_boate.nome_estabelecimento %></td>
+      <td><%=h bares_e_boate.descricao %></td>
+      <td><%=h bares_e_boate.publico_alvo %></td>
+      <td><%=h bares_e_boate.forma_pagamento %></td>
+      <td><%=h bares_e_boate.horario_atendimento %></td>
+      <td><%= link_to "Show", bares_e_boate %></td>
+      <td><%= link_to "Edit", edit_bares_e_boate_path(bares_e_boate) %></td>
+      <td><%= link_to "Destroy", bares_e_boate, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Bares E Boate", new_bares_e_boate_path %></p>
+

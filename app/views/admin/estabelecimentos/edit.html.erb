@@ -1,0 +1,38 @@
+<% title "Editar estabelecimento" %>
+
+<div id="col3">
+  <div id="col3_content" class="clearfix">
+    <div class="float_left">
+      <%= link_to "<button>Add foto</button>", new_admin_estabelecimento_foto_path(@estabelecimento) %>
+    </div>
+    <div class="float_right">
+      <%= link_to "<button>Voltar</button>", admin_estabelecimentos_path %>
+    </div><br /><br style="clear:both" />
+
+      <%=
+        if @estabelecimento.tipo_estabelecimento == "BECN"
+          render :partial => "form_becn"
+        elsif @estabelecimento.tipo_estabelecimento == "REST"
+          render :partial => "form_rest"
+        elsif @estabelecimento.tipo_estabelecimento == "IPLT"
+          render :partial => "form_iplt"
+        elsif @estabelecimento.tipo_estabelecimento == "HEPO"
+          render :partial => "form_hepo"
+        end
+       %>
+     <br style="clear:both" />
+
+    <% unless @estabelecimento.foto.blank? %>
+        <br /><h4>Fotos</h4><br />
+        <ul>
+          <% for foto in @estabelecimento.foto %>
+            <li><%= image_tag foto.imagem.url(:thumb) %><br /><%= foto.imagem_legenda %><br /><%= link_to "Apagar", admin_foto_path(foto), :confirm => 'Tem certeza?', :method => :delete %></li>
+          <% end %>
+        </ul>
+    <% end %>
+
+  </div>
+  <!-- IE Column Clearing -->
+  <div id="ie_clearing"> &#160; </div>
+</div>
+

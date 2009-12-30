@@ -1,0 +1,17 @@
+one:
+  acomodacao: MyString
+  valor_balcao: 1.5
+  valor_internet: 1.5
+  periodo: MyString
+  iniciar_em: 2009-12-27
+  terminar_em: 2009-12-27
+  estabelecimento_id: 1
+
+two:
+  acomodacao: MyString
+  valor_balcao: 1.5
+  valor_internet: 1.5
+  periodo: MyString
+  iniciar_em: 2009-12-27
+  terminar_em: 2009-12-27
+  estabelecimento_id: 1

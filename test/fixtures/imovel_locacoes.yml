@@ -1,0 +1,23 @@
+one:
+  cliente_id: 1
+  endereco_imovel: MyString
+  cidade_imovel: MyString
+  bairro_imovel: MyString
+  entre_ruas: MyString
+  ponto_referencia: MyString
+  valor_aluguel: 1.5
+  valor_condominio: 1.5
+  area_total: 1.5
+  descricao: MyText
+
+two:
+  cliente_id: 1
+  endereco_imovel: MyString
+  cidade_imovel: MyString
+  bairro_imovel: MyString
+  entre_ruas: MyString
+  ponto_referencia: MyString
+  valor_aluguel: 1.5
+  valor_condominio: 1.5
+  area_total: 1.5
+  descricao: MyText

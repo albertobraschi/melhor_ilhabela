@@ -1,0 +1,32 @@
+<% form_for @tarifario do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :acomodacao %><br />
+    <%= f.text_field :acomodacao %>
+  </p>
+  <p>
+    <%= f.label :valor_balcao %><br />
+    <%= f.text_field :valor_balcao %>
+  </p>
+  <p>
+    <%= f.label :valor_internet %><br />
+    <%= f.text_field :valor_internet %>
+  </p>
+  <p>
+    <%= f.label :periodo %><br />
+    <%= f.text_field :periodo %>
+  </p>
+  <p>
+    <%= f.label :iniciar_em %><br />
+    <%= f.date_select :iniciar_em %>
+  </p>
+  <p>
+    <%= f.label :terminar_em %><br />
+    <%= f.date_select :terminar_em %>
+  </p>
+  <p>
+    <%= f.label :estabelecimento_id %><br />
+    <%= f.text_field :estabelecimento_id %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

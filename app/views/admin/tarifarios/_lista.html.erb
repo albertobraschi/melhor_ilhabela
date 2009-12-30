@@ -1,0 +1,17 @@
+<%
+  valor = tarifario.periodo
+  resultado = case valor
+    when "DQ" then "Domingo à Quinta"
+    when "FS" then "Final de semana"
+  end
+%>
+<tr id='<%= dom_id(tarifario) %>'>
+  <td><%=h tarifario.acomodacao %></td>
+  <td><%=h number_to_currency(tarifario.valor_balcao) %></td>
+  <td><%=h number_to_currency(tarifario.valor_internet) %></td>
+  <td><%=h resultado %></td>
+  <td><%=h tarifario.iniciar_em.strftime("%d de %B, %Y") %></td>
+  <td><%=h tarifario.terminar_em.strftime("%d de %B, %Y") %></td>
+  <td><%= link_to_remote 'Excluir', :url=>admin_tarifario_path(tarifario), :method => :delete, :confirm => 'Confirma exclusão?' %></td>
+</tr>
+

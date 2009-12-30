@@ -1,0 +1,116 @@
+<% title "Cliente" %>
+<div id="col3">
+  <div id="col3_content" class="clearfix">
+    <div class="float_right clearfix">
+      <%= link_to "Editar", edit_admin_cliente_path(@cliente) %> | <%= link_to "Apagar", admin_cliente_path(@cliente), :confirm => 'Tem certeza?', :method => :delete %> | <%= link_to "Voltar", admin_clientes_path %>
+    </div><br />
+<ul>
+  <li>
+    <div class="input-block">
+  <strong>Nome Fantasia:</strong><br />
+  <%=h @cliente.nome_fantasia %>
+    </div>
+  <li>
+    <div class="input-block">
+  <strong>Razao Social:</strong><br />
+  <%=h @cliente.razao_social %>
+    </div>
+  <li>
+    <div class="input-block">
+  <strong>Cnpj Estabelecimento:</strong><br />
+  <%=h @cliente.cnpj_estabelecimento %>
+    </div>
+  </li>
+  <li>
+    <div class="input-block">
+  <strong>Ramo Atuacao:</strong><br />
+  <%=h @cliente.ramo_atuacao %>
+    </div>
+  <li>
+    <div class="input-block">
+  <strong>Endereco Estabelecimento:</strong><br />
+  <%=h @cliente.endereco_estabelecimento %>
+    </div>
+  <li>
+    <div class="input-block">
+  <strong>Numero Estabelecimento:</strong><br />
+  <%=h @cliente.numero_estabelecimento %>
+    </div>
+  </li>
+  <li>
+    <div class="input-block">
+  <strong>Complemento Estabelecimento:</strong><br />
+  <%=h @cliente.complemento_estabelecimento %>
+    </div>
+  <li>
+    <div class="input-block">
+  <strong>Cep Estabelecimento:</strong><br />
+  <%=h @cliente.cep_estabelecimento %>
+    </div>
+  <li>
+    <div class="input-block">
+  <strong>Bairro Estabelecimento:</strong><br />
+  <%=h @cliente.bairro_estabelecimento %>
+    </div>
+  </li>
+  <li>
+    <div class="input-block">
+  <strong>Cidade Estabelecimento:</strong><br />
+  <%=h @cliente.cidade_estabelecimento %>
+    </div>
+  <li>
+    <div class="input-block">
+  <strong>Estado Estabelecimento:</strong><br />
+  <%=h @cliente.estado_estabelecimento %>
+    </div>
+  <li>
+    <div class="input-block">
+  <strong>Telefone Comercial:</strong><br />
+  <%=h @cliente.telefone_comercial %>
+    </div>
+  </li>
+  <li>
+    <div class="input-block">
+  <strong>Telefone Celular:</strong><br />
+  <%=h @cliente.telefone_celular %>
+    </div>
+  <li>
+    <div class="input-block">
+  <strong>Telefone Fax:</strong><br />
+  <%=h @cliente.telefone_fax %>
+    </div>
+  <li>
+    <div class="input-block">
+  <strong>Email Estabelecimento:</strong><br />
+  <%=h @cliente.email_estabelecimento %>
+    </div>
+  </li>
+  <li>
+    <div class="input-block">
+  <strong>Nome Responsavel:</strong><br />
+  <%=h @cliente.nome_responsavel %>
+    </div>
+  <li>
+    <div class="input-block">
+  <strong>Email Responsavel:</strong><br />
+  <%=h @cliente.email_responsavel %>
+    </div>
+  <li>
+    <div class="input-block">
+  <strong>Telefone Responsavel:</strong><br />
+  <%=h @cliente.telefone_responsavel %>
+    </div>
+  </li>
+</ul>
+  <br style="clear:both" />
+
+  <% for estabelecimento in @cliente.estabelecimentos %>
+
+  <%= link_to "Ver estabelecimento", admin_estabelecimento_path(estabelecimento)  %>
+
+  <% end %>
+  </div>
+  <!-- IE Column Clearing -->
+  <div id="ie_clearing"> &#160; </div>
+</div>
+

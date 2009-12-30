@@ -1,0 +1,80 @@
+<% title "Cliente" %>
+
+<p>
+  <strong>Nome Fantasia:</strong>
+  <%=h @cliente.nome_fantasia %>
+</p>
+<p>
+  <strong>Razao Social:</strong>
+  <%=h @cliente.razao_social %>
+</p>
+<p>
+  <strong>Cnpj Estabelecimento:</strong>
+  <%=h @cliente.cnpj_estabelecimento %>
+</p>
+<p>
+  <strong>Ramo Atuacao:</strong>
+  <%=h @cliente.ramo_atuacao %>
+</p>
+<p>
+  <strong>Endereco Estabelecimento:</strong>
+  <%=h @cliente.endereco_estabelecimento %>
+</p>
+<p>
+  <strong>Numero Estabelecimento:</strong>
+  <%=h @cliente.numero_estabelecimento %>
+</p>
+<p>
+  <strong>Complemento Estabelecimento:</strong>
+  <%=h @cliente.complemento_estabelecimento %>
+</p>
+<p>
+  <strong>Cep Estabelecimento:</strong>
+  <%=h @cliente.cep_estabelecimento %>
+</p>
+<p>
+  <strong>Bairro Estabelecimento:</strong>
+  <%=h @cliente.bairro_estabelecimento %>
+</p>
+<p>
+  <strong>Cidade Estabelecimento:</strong>
+  <%=h @cliente.cidade_estabelecimento %>
+</p>
+<p>
+  <strong>Estado Estabelecimento:</strong>
+  <%=h @cliente.estado_estabelecimento %>
+</p>
+<p>
+  <strong>Telefone Comercial:</strong>
+  <%=h @cliente.telefone_comercial %>
+</p>
+<p>
+  <strong>Telefone Celular:</strong>
+  <%=h @cliente.telefone_celular %>
+</p>
+<p>
+  <strong>Telefone Fax:</strong>
+  <%=h @cliente.telefone_fax %>
+</p>
+<p>
+  <strong>Email Estabelecimento:</strong>
+  <%=h @cliente.email_estabelecimento %>
+</p>
+<p>
+  <strong>Nome Responsavel:</strong>
+  <%=h @cliente.nome_responsavel %>
+</p>
+<p>
+  <strong>Email Responsavel:</strong>
+  <%=h @cliente.email_responsavel %>
+</p>
+<p>
+  <strong>Telefone Responsavel:</strong>
+  <%=h @cliente.telefone_responsavel %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_cliente_path(@cliente) %> |
+  <%= link_to "Destroy", @cliente, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", clientes_path %>
+</p>

@@ -1,0 +1,52 @@
+  <li>
+    <div class="input-block">
+      <span>
+        <strong>Endereco Imovel:</strong>
+        <%= simple_format(@caso.apresentacao) %>
+      </span>
+    </div>
+    <div class="input-block">
+      <span>
+        <strong>Cidade Imovel:</strong>
+        <%= simple_format(@caso.tipo_acomodacao) %>
+      </span>
+    </div>
+    <div class="input-block">
+      <span>
+        <strong>Bairro Imovel:</strong>
+        <%= simple_format(@caso.caracteristica_acomodacao) %>
+      </span>
+    </div>
+  </li>
+  <li class="input-block-100">
+  <table class="full">
+    <caption>Tarifário</caption>
+    <tbody>
+      <tr>
+        <th>Acomodacao</th>
+        <th>Valor Balcao</th>
+        <th>Valor Internet</th>
+        <th>Periodo</th>
+        <th>Iniciar Em</th>
+        <th>Terminar Em</th>
+      </tr>
+    <% for tarifario in @tarifarios %>
+       <%
+        valor = tarifario.periodo
+        resultado = case valor
+          when "DQ" then "Domingo à Quinta"
+          when "FS" then "Final de semana"
+        end
+      %>
+      <tr>
+        <td><%=h tarifario.acomodacao %></td>
+        <td><%=h number_to_currency(tarifario.valor_balcao) %></td>
+        <td><%=h number_to_currency(tarifario.valor_internet) %></td>
+        <td><%=h resultado %></td>
+        <td><%=h tarifario.iniciar_em %></td>
+        <td><%=h tarifario.terminar_em %></td>
+      </tr>
+    <% end %>
+  </table>
+  </li>
+

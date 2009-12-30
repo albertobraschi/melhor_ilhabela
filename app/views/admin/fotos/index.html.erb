@@ -1,0 +1,10 @@
+<p>
+  <%= link_to "NOVO", new_admin_foto_path %>
+</p>
+
+<% for foto in @foto %>
+
+  <%= image_tag foto.imagem.url %>
+
+<% end %>
+

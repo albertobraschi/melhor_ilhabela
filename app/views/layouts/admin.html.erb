@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title><%= h(yield(:title) || "Melhor da Ilhabela") %></title>
+    <%= stylesheet_link_tag 'estilo' %>
+    <%= javascript_include_tag :defaults %>
+
+    <!--[if lte IE 7]>
+    <%= stylesheet_link_tag 'css/core/ie-estilo' %>
+  <![endif]-->
+    <%= yield(:head) %>
+  </head>
+<body class='admin <%= @col || "col1"%>'>
+  <div class="page_margins">
+    <div id="border-top">
+      <div id="edge-tl"></div>
+      <div id="edge-tr"></div>
+    </div>
+    <div class="page">
+
+      <%= render :partial => "partials/admin/adminHeader" %>
+
+      <%= render :partial => "partials/admin/adminNav" %>
+
+    <div id="main">
+      <%- flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <%- end -%>
+      <%= yield %>
+    </div>
+    <%= render :partial => "partials/admin/adminFooter" %>
+    </div>
+    <div id="border-bottom">
+      <div id="edge-bl"></div>
+      <div id="edge-br"></div>
+    </div>
+  </div>
+  </body>
+</html>
+

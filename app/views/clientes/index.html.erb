@@ -1,0 +1,51 @@
+<% title "Clientes" %>
+
+<table>
+  <tr>
+    <th>Nome Fantasia</th>
+    <th>Razao Social</th>
+    <th>Cnpj Estabelecimento</th>
+    <th>Ramo Atuacao</th>
+    <th>Endereco Estabelecimento</th>
+    <th>Numero Estabelecimento</th>
+    <th>Complemento Estabelecimento</th>
+    <th>Cep Estabelecimento</th>
+    <th>Bairro Estabelecimento</th>
+    <th>Cidade Estabelecimento</th>
+    <th>Estado Estabelecimento</th>
+    <th>Telefone Comercial</th>
+    <th>Telefone Celular</th>
+    <th>Telefone Fax</th>
+    <th>Email Estabelecimento</th>
+    <th>Nome Responsavel</th>
+    <th>Email Responsavel</th>
+    <th>Telefone Responsavel</th>
+  </tr>
+  <% for cliente in @clientes %>
+    <tr>
+      <td><%=h cliente.nome_fantasia %></td>
+      <td><%=h cliente.razao_social %></td>
+      <td><%=h cliente.cnpj_estabelecimento %></td>
+      <td><%=h cliente.ramo_atuacao %></td>
+      <td><%=h cliente.endereco_estabelecimento %></td>
+      <td><%=h cliente.numero_estabelecimento %></td>
+      <td><%=h cliente.complemento_estabelecimento %></td>
+      <td><%=h cliente.cep_estabelecimento %></td>
+      <td><%=h cliente.bairro_estabelecimento %></td>
+      <td><%=h cliente.cidade_estabelecimento %></td>
+      <td><%=h cliente.estado_estabelecimento %></td>
+      <td><%=h cliente.telefone_comercial %></td>
+      <td><%=h cliente.telefone_celular %></td>
+      <td><%=h cliente.telefone_fax %></td>
+      <td><%=h cliente.email_estabelecimento %></td>
+      <td><%=h cliente.nome_responsavel %></td>
+      <td><%=h cliente.email_responsavel %></td>
+      <td><%=h cliente.telefone_responsavel %></td>
+      <td><%= link_to "Show", cliente %></td>
+      <td><%= link_to "Edit", edit_cliente_path(cliente) %></td>
+      <td><%= link_to "Destroy", cliente, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Cliente", new_cliente_path %></p>

@@ -1,0 +1,43 @@
+  <li>
+    <div class="input-block-25">
+  <strong>Endereco Imovel:</strong>
+  <%=h @caso.endereco_imovel %>
+    </div>
+    <div class="input-block-25">
+  <strong>Cidade Imovel:</strong>
+  <%=h @caso.cidade_imovel %>
+    </div>
+    <div class="input-block-25">
+  <strong>Bairro Imovel:</strong>
+  <%=h @caso.bairro_imovel %>
+    </div>
+    <div class="input-block-25">
+  <strong>Entre Ruas:</strong>
+  <%=h @caso.entre_ruas %>
+    </div>
+  </li>
+  <li>
+    <div class="input-block-25">
+  <strong>Ponto Referencia:</strong>
+  <%=h @caso.ponto_referencia %>
+    </div>
+    <div class="input-block-25">
+  <strong>Valor Aluguel:</strong>
+  <%=h number_to_currency(@caso.valor_aluguel) %>
+    </div>
+    <div class="input-block-25">
+  <strong>Valor Condominio:</strong>
+  <%=h number_to_currency(@caso.valor_condominio) %>
+    </div>
+    <div class="input-block-25">
+  <strong>Area Total:</strong>
+  <%=h @caso.area_total %> m²
+    </div>
+  </li>
+  <li>
+    <div class="input-block-100">
+  <strong>Descricao:</strong>
+  <%=h @caso.descricao %>
+    </div>
+  </li>
+

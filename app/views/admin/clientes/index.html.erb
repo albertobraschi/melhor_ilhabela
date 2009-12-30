@@ -1,0 +1,51 @@
+<% title "Clientes" %>
+
+
+<div id="col2">
+  <div id="col2_content" class="clearfix">
+    <h6 class="vlist">Menu</h6>
+    <ul class="vlist">
+      <li><%= link_to "Adicionar cliente", new_admin_cliente_path %></li>
+    </ul>
+    <div class="block-busca">
+      <% form_tag admin_clientes_path,:class=>"yform", :method => 'get' do %>
+        <label for="termo"><strong>Buscar cliente</strong><br /><%= text_field_tag :search, params[:search] %><%= submit_tag "Ok", :name => nil %></label>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div id="col3">
+  <div id="col3_content" class="clearfix">
+    <ul>
+      <li>
+        <% if params[:search]%>
+          Busca resultou em: <%= pluralize(@clientes.count, 'registro')%>
+        <% end %>
+      </li>
+      <li>
+        <table class="full">
+          <caption>Clientes</caption>
+          <tbody>
+            <tr>
+              <th>Nome fantasia</th>
+              <th>Nome responsável</th>
+              <th>Data de cadastro</th>
+              <th class="right">Ações</th>
+            </tr>
+            <% for cliente in @clientes %>
+              <tr>
+                <td><%=h cliente.nome_fantasia %></td>
+                <td><%=h cliente.nome_responsavel %></td>
+                <td><%=h cliente.created_at.strftime("%d de %B, %Y") %></td>
+                <td class="right"><%= link_to "Ver", admin_cliente_path(cliente) %> | <%= link_to "Editar", edit_admin_cliente_path(cliente) %> | <%= link_to "Apagar", admin_cliente_path(cliente), :confirm => 'Tem certeza?', :method => :delete %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </li>
+    </ul>
+  </div>
+  <!-- IE Column Clearing -->
+  <div id="ie_clearing"> &#160; </div>
+</div>
+

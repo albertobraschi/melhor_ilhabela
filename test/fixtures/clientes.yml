@@ -1,0 +1,39 @@
+one:
+  nome_fantasia: MyString
+  razao_social: MyString
+  cnpj_estabelecimento: 1
+  ramo_atuacao: MyString
+  endereco_estabelecimento: MyString
+  numero_estabelecimento: 1
+  complemento_estabelecimento: MyString
+  cep_estabelecimento: 1
+  bairro_estabelecimento: MyString
+  cidade_estabelecimento: MyString
+  estado_estabelecimento: MyString
+  telefone_comercial: 1
+  telefone_celular: 1
+  telefone_fax: 1
+  email_estabelecimento: MyString
+  nome_responsavel: MyString
+  email_responsavel: MyString
+  telefone_responsavel: 1
+
+two:
+  nome_fantasia: MyString
+  razao_social: MyString
+  cnpj_estabelecimento: 1
+  ramo_atuacao: MyString
+  endereco_estabelecimento: MyString
+  numero_estabelecimento: 1
+  complemento_estabelecimento: MyString
+  cep_estabelecimento: 1
+  bairro_estabelecimento: MyString
+  cidade_estabelecimento: MyString
+  estado_estabelecimento: MyString
+  telefone_comercial: 1
+  telefone_celular: 1
+  telefone_fax: 1
+  email_estabelecimento: MyString
+  nome_responsavel: MyString
+  email_responsavel: MyString
+  telefone_responsavel: 1

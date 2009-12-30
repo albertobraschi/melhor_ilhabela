@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <title>Melhor da Ilhabela</title>
+  <%= stylesheet_link_tag 'estilo' %>
+  <!--[if lte IE 7]>
+   <%= stylesheet_link_tag 'css/core/ie-estilo' %>
+  <![endif]-->
+</head>
+<body id="adminLogin">
+  <div class="page_margins">
+    <div id="border-top">
+      <div id="edge-tl"></div>
+      <div id="edge-tr"></div>
+    </div>
+    <div class="page">
+      <div id="header">
+        <h1>Melhor da Ilhabela</h1>
+      </div>
+      <div id="main">
+          <% form_for(@user_session, :html=>{:class=>"yform columnar"}) do |f| %>
+          <%= f.error_messages %>
+          <form method="post" action="" class="yform columnar">
+            <fieldset>
+              <legend>Painel de controle</legend>
+
+              <div class="type-text">
+                <%= f.label :username, "Usuário" %>
+                <%= f.text_field :username, :size =>"20" %>
+              </div>
+
+              <div class="type-text">
+                <%= f.label :username, "Senha" %>
+                <%= f.password_field :password, :size =>"20" %>
+              </div>
+
+            <div class="type-button float_right">
+              <%= f.submit "entrar" %>
+            </div>
+            <% end %>
+      </div>
+      <div id="footer">Layout based on <a href="http://www.yaml.de/">YAML</a>
+      </div>
+    </div>
+    <div id="border-bottom">
+      <div id="edge-bl"></div>
+      <div id="edge-br"></div>
+    </div>
+  </div>
+</body>
+</html>
+

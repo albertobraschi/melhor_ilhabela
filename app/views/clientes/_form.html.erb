@@ -1,0 +1,76 @@
+<% form_for @cliente do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :nome_fantasia %><br />
+    <%= f.text_field :nome_fantasia %>
+  </p>
+  <p>
+    <%= f.label :razao_social %><br />
+    <%= f.text_field :razao_social %>
+  </p>
+  <p>
+    <%= f.label :cnpj_estabelecimento %><br />
+    <%= f.text_field :cnpj_estabelecimento %>
+  </p>
+  <p>
+    <%= f.label :ramo_atuacao %><br />
+    <%= f.text_field :ramo_atuacao %>
+  </p>
+  <p>
+    <%= f.label :endereco_estabelecimento %><br />
+    <%= f.text_field :endereco_estabelecimento %>
+  </p>
+  <p>
+    <%= f.label :numero_estabelecimento %><br />
+    <%= f.text_field :numero_estabelecimento %>
+  </p>
+  <p>
+    <%= f.label :complemento_estabelecimento %><br />
+    <%= f.text_field :complemento_estabelecimento %>
+  </p>
+  <p>
+    <%= f.label :cep_estabelecimento %><br />
+    <%= f.text_field :cep_estabelecimento %>
+  </p>
+  <p>
+    <%= f.label :bairro_estabelecimento %><br />
+    <%= f.text_field :bairro_estabelecimento %>
+  </p>
+  <p>
+    <%= f.label :cidade_estabelecimento %><br />
+    <%= f.text_field :cidade_estabelecimento %>
+  </p>
+  <p>
+    <%= f.label :estado_estabelecimento %><br />
+    <%= f.text_field :estado_estabelecimento %>
+  </p>
+  <p>
+    <%= f.label :telefone_comercial %><br />
+    <%= f.text_field :telefone_comercial %>
+  </p>
+  <p>
+    <%= f.label :telefone_celular %><br />
+    <%= f.text_field :telefone_celular %>
+  </p>
+  <p>
+    <%= f.label :telefone_fax %><br />
+    <%= f.text_field :telefone_fax %>
+  </p>
+  <p>
+    <%= f.label :email_estabelecimento %><br />
+    <%= f.text_field :email_estabelecimento %>
+  </p>
+  <p>
+    <%= f.label :nome_responsavel %><br />
+    <%= f.text_field :nome_responsavel %>
+  </p>
+  <p>
+    <%= f.label :email_responsavel %><br />
+    <%= f.text_field :email_responsavel %>
+  </p>
+  <p>
+    <%= f.label :telefone_responsavel %><br />
+    <%= f.text_field :telefone_responsavel %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

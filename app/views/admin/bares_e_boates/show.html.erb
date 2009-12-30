@@ -1,0 +1,28 @@
+<% title "Bares E Boate" %>
+
+<p>
+  <strong>Cliente:</strong>
+  <%=h @bares_e_boate.cliente_id %>
+</p>
+<p>
+  <strong>Descricao:</strong>
+  <%=h @bares_e_boate.descricao %>
+</p>
+<p>
+  <strong>Publico Alvo:</strong>
+  <%=h @bares_e_boate.publico_alvo %>
+</p>
+<p>
+  <strong>Forma Pagamento:</strong>
+  <%=h @bares_e_boate.forma_pagamento %>
+</p>
+<p>
+  <strong>Horario Atendimento:</strong>
+  <%=h @bares_e_boate.horario_atendimento %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_bares_e_boate_path(@bares_e_boate) %> |
+  <%= link_to "Destroy", @bares_e_boate, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", bares_e_boates_path %>
+</p>

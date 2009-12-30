@@ -1,0 +1,12 @@
+<% title "Estabelecimento" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @estabelecimento.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_estabelecimento_path(@estabelecimento) %> |
+  <%= link_to "Destroy", @estabelecimento, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", estabelecimentos_path %>
+</p>

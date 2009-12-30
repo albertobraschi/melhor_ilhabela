@@ -1,0 +1,52 @@
+<% title "Estabelecimento"
+  valor = @estabelecimento.tipo_estabelecimento
+  resultado = case valor
+    when "BECN" then "Bares e Boates"
+    when "REST" then "Restaurantes"
+    when "IPLT" then "Imóveis para Locação"
+    when "HEPO" then "Hotéis e Pousadas"
+  end  %>
+
+<div id="col3">
+  <div id="col3_content" class="clearfix">
+    <div class="float_right clearfix">
+      <%= link_to "Editar", edit_admin_estabelecimento_path(@estabelecimento) %> | <%= link_to "Apagar", admin_estabelecimento_path(@estabelecimento), :confirm => 'Tem certeza?', :method => :delete %> | <%= link_to "Voltar", admin_estabelecimentos_path %>
+    </div><br />
+    <ul>
+      <li>
+        <div class="input-block-50">
+          <strong>Cliente (razão social):</strong><br />
+          <%=h @estabelecimento.cliente.razao_social %>
+        </div>
+        <div class="input-block-50">
+          <strong>Tipo estabelecimento:</strong><br />
+          <%=h resultado %>
+        </div>
+      </li>
+      <%=
+        if @estabelecimento.tipo_estabelecimento == "BECN"
+          render :partial => "becn"
+        elsif @estabelecimento.tipo_estabelecimento == "REST"
+          render :partial => "rest"
+        elsif @estabelecimento.tipo_estabelecimento == "IPLT"
+          render :partial => "iplt"
+        elsif @estabelecimento.tipo_estabelecimento == "HEPO"
+          render :partial => "hepo"
+        end
+       %>
+      <% unless @estabelecimento.foto.blank? %>
+        <li class="input-block-100">
+          <br /><h4>Fotos</h4>
+          <ul>
+            <% for foto in @estabelecimento.foto %>
+              <li><%= image_tag foto.imagem.url(:thumb) %><br /><%= foto.imagem_legenda %></li>
+            <% end %>
+          </ul>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <!-- IE Column Clearing -->
+  <div id="ie_clearing"> &#160; </div>
+</div>
+

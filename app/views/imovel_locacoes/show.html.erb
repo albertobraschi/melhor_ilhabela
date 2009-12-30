@@ -1,0 +1,48 @@
+<% title "Imovel Locacao" %>
+
+<p>
+  <strong>Cliente:</strong>
+  <%=h @imovel_locacao.cliente_id %>
+</p>
+<p>
+  <strong>Endereco Imovel:</strong>
+  <%=h @imovel_locacao.endereco_imovel %>
+</p>
+<p>
+  <strong>Cidade Imovel:</strong>
+  <%=h @imovel_locacao.cidade_imovel %>
+</p>
+<p>
+  <strong>Bairro Imovel:</strong>
+  <%=h @imovel_locacao.bairro_imovel %>
+</p>
+<p>
+  <strong>Entre Ruas:</strong>
+  <%=h @imovel_locacao.entre_ruas %>
+</p>
+<p>
+  <strong>Ponto Referencia:</strong>
+  <%=h @imovel_locacao.ponto_referencia %>
+</p>
+<p>
+  <strong>Valor Aluguel:</strong>
+  <%=h @imovel_locacao.valor_aluguel %>
+</p>
+<p>
+  <strong>Valor Condominio:</strong>
+  <%=h @imovel_locacao.valor_condominio %>
+</p>
+<p>
+  <strong>Area Total:</strong>
+  <%=h @imovel_locacao.area_total %>
+</p>
+<p>
+  <strong>Descricao:</strong>
+  <%=h @imovel_locacao.descricao %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_imovel_locacao_path(@imovel_locacao) %> |
+  <%= link_to "Destroy", @imovel_locacao, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", imovel_locacoes_path %>
+</p>

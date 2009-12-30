@@ -1,0 +1,3 @@
+page.insert_html :bottom,'tabela',:partial => "lista", :locals =>{:tarifario =>@tarifario}
+page.visual_effect :highlight, dom_id(@tarifario)
+

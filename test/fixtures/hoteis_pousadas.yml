@@ -1,0 +1,11 @@
+one:
+  estabelecimento_id: 1
+  apresentacao: MyText
+  tipo_acomodacao: 1
+  caracteristica_acomodacao: MyText
+
+two:
+  estabelecimento_id: 1
+  apresentacao: MyText
+  tipo_acomodacao: 1
+  caracteristica_acomodacao: MyText

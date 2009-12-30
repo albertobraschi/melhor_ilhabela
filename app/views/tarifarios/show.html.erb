@@ -1,0 +1,36 @@
+<% title "Tarifario" %>
+
+<p>
+  <strong>Acomodacao:</strong>
+  <%=h @tarifario.acomodacao %>
+</p>
+<p>
+  <strong>Valor Balcao:</strong>
+  <%=h @tarifario.valor_balcao %>
+</p>
+<p>
+  <strong>Valor Internet:</strong>
+  <%=h @tarifario.valor_internet %>
+</p>
+<p>
+  <strong>Periodo:</strong>
+  <%=h @tarifario.periodo %>
+</p>
+<p>
+  <strong>Iniciar Em:</strong>
+  <%=h @tarifario.iniciar_em %>
+</p>
+<p>
+  <strong>Terminar Em:</strong>
+  <%=h @tarifario.terminar_em %>
+</p>
+<p>
+  <strong>Estabelecimento:</strong>
+  <%=h @tarifario.estabelecimento_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_tarifario_path(@tarifario) %> |
+  <%= link_to "Destroy", @tarifario, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", tarifarios_path %>
+</p>

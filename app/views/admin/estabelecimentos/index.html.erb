@@ -1,0 +1,55 @@
+<% title "Estabelecimentos" %>
+
+
+ <div id="col2">
+  <div id="col2_content" class="clearfix">
+    <h6 class="vlist">Menu</h6>
+    <ul class="vlist">
+      <li><%= link_to "Adicionar estabelecimento", new_admin_estabelecimento_path %></li>
+    </ul>
+    <div class="block-busca">
+      <form class="yform">
+        <label for="termo"><strong>Buscar estabelecimento</strong><br /><input type="text" /><input type="submit" value="Ok"/></label>
+      </form>
+    </div>
+  </div>
+</div>
+<div id="col3">
+  <div id="col3_content" class="clearfix">
+    <ul>
+      <li>
+        <table class="full">
+          <caption>Estabelecimentos</caption>
+          <tbody>
+            <tr>
+              <th>Cliente (razão social)</th>
+              <th>Tipo</th>
+              <th>Criado em</th>
+              <th class="right">Ações</th>
+            </tr>
+            <% for estabelecimento in @estabelecimentos %>
+                <%
+                  valor = estabelecimento.tipo_estabelecimento
+                  resultado = case valor
+                    when "BECN" then "Bares e Boates"
+                    when "REST" then "Restaurantes"
+                    when "IPLT" then "Imóveis para Locação"
+                    when "HEPO" then "Hotéis e Pousadas"
+                  end
+                %>
+              <tr>
+                <td><%= estabelecimento.cliente.razao_social %></td>
+                <td><%= resultado %></td>
+                <td><%= estabelecimento.created_at.strftime("%d de %B, %Y") %></td>
+                <td class="right"><%= link_to "Ver", admin_estabelecimento_path(estabelecimento) %> | <%= link_to "Editar", edit_admin_estabelecimento_path(estabelecimento) %> | <%= link_to "Apagar", admin_estabelecimento_path(estabelecimento), :confirm => 'Tem certeza?', :method => :delete %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </li>
+    </ul>
+  </div>
+  <!-- IE Column Clearing -->
+  <div id="ie_clearing"> &#160; </div>
+</div>
+

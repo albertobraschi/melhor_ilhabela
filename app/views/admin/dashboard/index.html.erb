@@ -1,0 +1,74 @@
+<div id="col1">
+  <div id="col1_content" class="clearfix">
+    <ul>
+      <li>
+        <table class="full">
+          <caption>Últimos 5 termos de busca</caption>
+          <tbody>
+            <tr>
+              <th>Termo de busca</th>
+              <th>Nº de usos</th>
+            </tr>
+            <tr>
+              <td>content 1.1</td>
+              <td>content 1.2</td>
+            </tr>
+            <tr>
+              <td>content 2.1</td>
+              <td>content 2.3</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>
+        <table class="full">
+          <caption>Top 5 termos de busca</caption>
+          <tbody>
+            <tr>
+              <th>Termo de busca</th>
+              <th>Nº de usos</th>
+            </tr>
+            <tr>
+              <td>content 1.1</td>
+              <td>content 1.2</td>
+            </tr>
+            <tr>
+              <td>content 2.1</td>
+              <td>content 2.3</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+    </ul>
+  </div>
+</div>
+<div id="col3">
+  <div id="col3_content" class="clearfix">
+    <ul>
+      <li>
+        <table class="full">
+          <caption>Novos clientes</caption>
+          <tbody>
+            <tr>
+              <th>Nome fantasia</th>
+              <th>Nome responsável</th>
+              <th>Data de cadastro</th>
+              <th class="right">Ações</th>
+            </tr>
+            <% for cliente in @clientes %>
+              <tr>
+                <td><%=h cliente.nome_fantasia %></td>
+                <td><%=h cliente.nome_responsavel %></td>
+                <td><%=h cliente.created_at %></td>
+                <td class="right"><%= link_to "Ver", admin_cliente_path(cliente) %> | <%= link_to "Editar", edit_admin_cliente_path(cliente) %> | <%= link_to "Apagar", admin_cliente_path(cliente), :confirm => 'Tem certeza?', :method => :delete %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </li>
+    </ul>
+  </div>
+  <!-- IE Column Clearing -->
+  <div id="ie_clearing"> &#160; </div>
+</div>
+

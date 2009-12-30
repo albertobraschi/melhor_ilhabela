@@ -1,0 +1,20 @@
+<% form_for @hoteis_pousada do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :estabelecimento_id %><br />
+    <%= f.text_field :estabelecimento_id %>
+  </p>
+  <p>
+    <%= f.label :apresentacao %><br />
+    <%= f.text_area :apresentacao %>
+  </p>
+  <p>
+    <%= f.label :tipo_acomodacao %><br />
+    <%= f.text_field :tipo_acomodacao %>
+  </p>
+  <p>
+    <%= f.label :caracteristica_acomodacao %><br />
+    <%= f.text_area :caracteristica_acomodacao %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

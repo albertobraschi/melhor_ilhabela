@@ -1,0 +1,17 @@
+<% title "Estabelecimentos" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% for estabelecimento in @estabelecimentos %>
+    <tr>
+      <td><%=h estabelecimento.name %></td>
+      <td><%= link_to "Show", estabelecimento %></td>
+      <td><%= link_to "Edit", edit_estabelecimento_path(estabelecimento) %></td>
+      <td><%= link_to "Destroy", estabelecimento, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Estabelecimento", new_estabelecimento_path %></p>

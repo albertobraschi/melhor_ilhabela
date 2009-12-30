@@ -1,0 +1,13 @@
+one:
+  cliente_id: 1
+  descricao: MyText
+  publico_alvo: MyText
+  forma_pagamento: MyText
+  horario_atendimento: MyText
+
+two:
+  cliente_id: 1
+  descricao: MyText
+  publico_alvo: MyText
+  forma_pagamento: MyText
+  horario_atendimento: MyText
